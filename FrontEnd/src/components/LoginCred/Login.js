@@ -42,10 +42,12 @@ const Login = () =>{
     }
     return(
         <>
+            <div className='body'>
             <form onSubmit={handleSubmit} className='text-black flex flex-col gap-y-4 p-4 rounded-xl bg-gray-300'>
                 <label>Username:</label>
                     <input
                         type="text"
+                        id="name"
                         name="firstName"
                         value={username}
                         onChange={(e)=>setUsername(e.target.value)}
@@ -57,6 +59,7 @@ const Login = () =>{
                 <label> Password: </label>
                     <input
                         type="password"
+                        id="pass"
                         name="password"
                         value={password}
                         onChange={(e)=>setPassword(e.target.value)}
@@ -69,6 +72,7 @@ const Login = () =>{
                 <label>{errorMessage}</label>
                 <button type="submit">Login</button>
             </form>
+            </div>
         </>
     )
 }
